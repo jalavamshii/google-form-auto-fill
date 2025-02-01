@@ -1,0 +1,27 @@
+{
+    "manifest_version": 3,
+    "name": "GoogleForm Fill",
+    "version": "1.2.0",
+    "description": "Extension to automatically fill previously set form text fields. Allows users to add or delete key values as needed, also can extract the html of the page.",
+    "permissions": [
+      "activeTab",
+      "scripting",
+      "storage"
+    ],
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+    },
+    "content_scripts": [
+      {
+        "matches": ["http://*/*", "https://*/*"],
+        "js": ["contentScript.js"]
+      }
+    ]
+    
+}
+  
